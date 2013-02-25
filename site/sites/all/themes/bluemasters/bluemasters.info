@@ -1,0 +1,41 @@
+name = Blue Masters
+description = Theme based on Blue Masters PSD template
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+regions[header] = Header
+regions[search_area] = Search area
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[banner] = Banner
+regions[home_area_1] = Home area 1
+regions[home_area_2] = Home area 2
+regions[home_area_3] = Home area 3
+regions[home_area_3_b] = Home area 3 b
+regions[footer_left_1] = Footer left 1
+regions[footer_left_2] = Footer left 2
+regions[footer_center] = Footer center
+regions[footer_right] = Footer right
+regions[footer] = Footer
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+stylesheets[all and (min-width: 980px)][] = css/960.css
+stylesheets[all and (min-width: 760px) and (max-width: 980px)][] = css/720.css
+stylesheets[all and (max-width: 759px)][] = css/mobile.css
+stylesheets[all][] = css/style.css
+
+settings[responsive_respond]= 0
+settings[responsive_meta]= 1
+
+version = "7.1.1"
+project = "bluemasters"
+; Information added by drupal.org packaging script on 2011-11-15
+version = "7.x-1.3"
+core = "7.x"
+project = "bluemasters"
+datestamp = "1321351835"
+
