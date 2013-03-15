@@ -66,9 +66,14 @@
             <div class="grid_7">
                 <!--navigation-->
                 <div id="navigation">
-        			<?php $menu_name = variable_get('menu_main_links_source', 'main-menu');
-                    $main_menu_tree = menu_tree($menu_name); 
-                    print drupal_render($main_menu_tree); ?>
+                    <?php if ($page['navigation']) :?>
+                    <?php print drupal_render($page['navigation']); ?>
+                    <?php else :
+                    if (module_exists('i18n_menu')) {
+                    $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
+                    } else { $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu')); }
+                    print drupal_render($main_menu_tree);
+                    endif; ?>
                 </div>
                 <!--EOF:navigation-->
             </div>
@@ -194,6 +199,7 @@
 
     <!--footer-bottom-->
     <div id="footer-bottom">
+        
         <div id="footer-bottom-inside" class="clearfix container_12">
 
             <div class="grid_5">
@@ -205,7 +211,10 @@
             <div class="grid_7">
             	<div id="footer-bottom-inside-right">
         		<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-            	</div>
+            	<?php if ($page['footer_bottom']) :?>
+                <?php print render($page['footer_bottom']); ?>
+                <?php endif; ?>
+                </div>
             </div>
 
             <div class="grid_12">

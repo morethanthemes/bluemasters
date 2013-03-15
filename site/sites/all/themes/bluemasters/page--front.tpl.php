@@ -66,9 +66,14 @@
             <div class="grid_7">
                 <!--navigation-->
                 <div id="navigation">
-        			<?php $menu_name = variable_get('menu_main_links_source', 'main-menu');
-                    $main_menu_tree = menu_tree($menu_name); 
-                    print drupal_render($main_menu_tree); ?>
+                    <?php if ($page['navigation']) :?>
+                    <?php print drupal_render($page['navigation']); ?>
+                    <?php else :
+                    if (module_exists('i18n_menu')) {
+                    $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
+                    } else { $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu')); }
+                    print drupal_render($main_menu_tree);
+                    endif; ?>
                 </div>
                 <!--EOF:navigation-->
             </div>
@@ -83,26 +88,49 @@
                 <div id="banner">
                 <?php print render($page['banner']); ?>
                 
-                    <div class="main_view">
-                        <div class="window">
-                            <div class="image_reel">
-                                <a href="<?php print url('node/3'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-3.jpg'; ?>"></a>
-                                <a href="<?php print url('node/2'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-2.jpg'; ?>"></a>
-                                <a href="<?php print url('node/1'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-1.jpg'; ?>"></a>
-                            </div>
-                            <div class="descriptions">
-                                <div class="desc" style="display: none;">About Bluemasters</div>
-                                <div class="desc" style="display: none;">Our Portfolio</div>
-                                <div class="desc" style="display: none;">Creation of Beaches</div>
-                            </div>
-                        </div>
-                    
-                        <div class="paging">
-                            <a rel="1" href="#">1</a>
-                            <a rel="2" href="#">2</a>
-                            <a rel="3" href="#">3</a>
-                        </div>
-                    </div>
+                <?php if (theme_get_setting('slideshow_display','bluemasters')): ?>
+
+<!--#slideshow-->
+<div id="slideshow">
+
+<div class="flexslider">
+<ul class="slides">
+
+<!-- slider-item -->
+<li class="slider-item">
+<div class="slider-item-image">
+<a href="<?php print url('node/3'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-3.jpg'; ?>"></a>
+</div>
+<div class="slider-item-caption">About Bluemasters</div>
+</li>
+<!-- EOF: slider-item -->
+
+<!-- slider-item -->
+<li class="slider-item">
+<div class="slider-item-image">
+<a href="<?php print url('node/2'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-2.jpg'; ?>"></a>
+</div>
+<div class="slider-item-caption">Our Portfolio</div>
+</li>
+<!-- EOF: slider-item -->
+
+<!-- slider-item -->
+<li class="slider-item">
+<div class="slider-item-image">
+<a href="<?php print url('node/1'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-1.jpg'; ?>"></a>
+</div>
+<div class="slider-item-caption">Creation of Beaches</div>
+</li>
+<!-- EOF: slider-item -->
+
+</ul>
+</div>
+
+</div>
+<!--EOF:#slideshow-->
+
+                <?php endif; ?>
+
                 </div>
                 <!--EOF:banner-->
             </div>    
@@ -122,21 +150,27 @@
                     <?php endif; ?>
 
                     <div class="grid_4 alpha">
-                        <div class="home-block-area first">
-                            <?php print render($page['home_area_1']);?> 		
+                        <div class="column-fix">
+                            <div class="home-block-area first">
+                                <?php print render($page['home_area_1']);?> 		
+                            </div>
                         </div>
                     </div>
 
                     <div class="grid_4 alpha omega">
-                        <div class="home-block-area">
-                            <?php print render($page['home_area_2']);?> 
+                        <div class="column-fix">
+                            <div class="home-block-area">
+                                <?php print render($page['home_area_2']);?> 
+                            </div>
                         </div>
                     </div>
 
                     <div class="grid_4 omega">
-                        <div class="home-block-area last">
-                            <?php print render($page['home_area_3']);?> 
-                            <?php print render($page['home_area_3_b']);?> 
+                        <div class="column-fix">
+                            <div class="home-block-area last">
+                                <?php print render($page['home_area_3']);?> 
+                                <?php print render($page['home_area_3_b']);?> 
+                            </div>
                         </div>
                     </div>
 
@@ -186,6 +220,7 @@
 
     <!--footer-bottom-->
     <div id="footer-bottom">
+        
         <div id="footer-bottom-inside" class="clearfix container_12">
 
             <div class="grid_5">
@@ -197,7 +232,10 @@
             <div class="grid_7">
             	<div id="footer-bottom-inside-right">
         		<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-            	</div>
+            	<?php if ($page['footer_bottom']) :?>
+                <?php print render($page['footer_bottom']); ?>
+                <?php endif; ?>
+                </div>
             </div>
 
             <div class="grid_12">

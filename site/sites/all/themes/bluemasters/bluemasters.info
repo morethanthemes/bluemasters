@@ -4,8 +4,14 @@ version = VERSION
 core = 7.x
 engine = phptemplate
 
+stylesheets[all and (min-width: 980px)][] = css/960.css
+stylesheets[all and (min-width: 760px) and (max-width: 979px)][] = css/720.css
+stylesheets[all and (max-width: 759px)][] = css/mobile.css
+stylesheets[all][] = css/style.css
+
 regions[header] = Header
 regions[search_area] = Search area
+regions[navigation] = Navigation
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
@@ -19,17 +25,22 @@ regions[footer_left_2] = Footer left 2
 regions[footer_center] = Footer center
 regions[footer_right] = Footer right
 regions[footer] = Footer
+regions[footer_bottom] = Footer Bottom
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
-stylesheets[all and (min-width: 980px)][] = css/960.css
-stylesheets[all and (min-width: 760px) and (max-width: 980px)][] = css/720.css
-stylesheets[all and (max-width: 759px)][] = css/mobile.css
-stylesheets[all][] = css/style.css
-
 settings[responsive_respond]= 0
 settings[responsive_meta]= 1
+settings[slideshow_display]= 1
+settings[slideshow_js]= 1
+settings[slideshow_effect]='slide'
+settings[slideshow_effect_time]='5'
+settings[slideshow_animation_time]='0.5'
+settings[slideshow_random]= 0
+settings[slideshow_controls]= 1
+settings[slideshow_pause]= 1
+settings[slideshow_touch]= 1
 
 version = "7.1.1"
 project = "bluemasters"

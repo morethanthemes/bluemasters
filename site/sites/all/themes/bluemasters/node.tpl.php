@@ -22,7 +22,7 @@
 
   <div class="clearfix">
     <?php if (!empty($content['links'])): ?>
-      <div class="links"><?php print render($content['links']); ?></div>
+      <div class="links clearfix"><?php print render($content['links']); ?></div>
     <?php endif; ?>
 
     <?php print render($content['comments']); ?>
