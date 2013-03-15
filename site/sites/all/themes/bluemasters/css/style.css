@@ -310,7 +310,7 @@ ul.menu li { margin: 0 0 0.25em 1.5em; padding: 0; }
 
 ul li.leaf { list-style-type: disc; list-style-image:none; }
 
-ul.inline li.node-readmore, ul.inline li.comment-add { background: #11719F; border: none; color: #FFFFFF; float: right; font-weight: bold; margin: 10px 0 0 9px;  cursor:pointer; 
+ul.inline li.node-readmore, ul.inline li.comment-add { background: #11719F; border: none; color: #FFFFFF; float: right; font-weight: bold; margin: 10px 0 0 7px;  cursor:pointer; 
 font-family: Arial, Verdana, Helvetica, sans-serif; padding:10px; }
 
 .node-readmore a, .comment-add a, .comment-add a.active { color:#ffffff; padding:10px; }
@@ -647,6 +647,8 @@ ul li a { text-decoration:none; }
 	/*home-blocks*/
 	#home-blocks-area .region-home-area-1 .block h2, #home-blocks-area .region-home-area-2 .block h2, #home-blocks-area .region-home-area-3 .block h2 { background: none; padding: 10px 0 0 10px; }
 	#home-blocks-area .block .content { padding: 10px; }
+	#home-blocks-area ul.inline li.node-readmore, #home-blocks-area ul.inline li.comment-add { margin: 10px 0 0 5px;  padding:7px 1px; }
+	#home-blocks-area ul.inline li.node-readmore.last { margin: 10px 0 0 0px; }
 	.ico { margin: 0 10px 10px 0; }
 	/*main-area*/
 	#main-area-inside { background-image:url(../images/main-area-bg_680.png); }
