@@ -97,7 +97,7 @@
                                 <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
                            
                     			<?php if ($messages): ?>
-                                <div id="console" class="clearfix">
+                                <div class="clearfix">
                     			<?php print $messages; ?>
                                 </div>
                                 <?php endif; ?>

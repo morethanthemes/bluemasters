@@ -90,44 +90,44 @@
                 
                 <?php if (theme_get_setting('slideshow_display','bluemasters')): ?>
 
-<!--#slideshow-->
-<div id="slideshow">
-
-<div class="flexslider">
-<ul class="slides">
-
-<!-- slider-item -->
-<li class="slider-item">
-<div class="slider-item-image">
-<a href="<?php print url('node/3'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-3.jpg'; ?>"></a>
-</div>
-<div class="slider-item-caption">About Bluemasters</div>
-</li>
-<!-- EOF: slider-item -->
-
-<!-- slider-item -->
-<li class="slider-item">
-<div class="slider-item-image">
-<a href="<?php print url('node/2'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-2.jpg'; ?>"></a>
-</div>
-<div class="slider-item-caption">Our Portfolio</div>
-</li>
-<!-- EOF: slider-item -->
-
-<!-- slider-item -->
-<li class="slider-item">
-<div class="slider-item-image">
-<a href="<?php print url('node/1'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-1.jpg'; ?>"></a>
-</div>
-<div class="slider-item-caption">Creation of Beaches</div>
-</li>
-<!-- EOF: slider-item -->
-
-</ul>
-</div>
-
-</div>
-<!--EOF:#slideshow-->
+                <!--#slideshow-->
+                <div id="slideshow">
+                
+                <div class="flexslider">
+                <ul class="slides">
+                
+                <!-- slider-item -->
+                <li class="slider-item">
+                <div class="slider-item-image">
+                <a href="<?php print url('node/3'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-3.jpg'; ?>"></a>
+                </div>
+                <div class="slider-item-caption">About Bluemasters</div>
+                </li>
+                <!-- EOF: slider-item -->
+                
+                <!-- slider-item -->
+                <li class="slider-item">
+                <div class="slider-item-image">
+                <a href="<?php print url('node/2'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-2.jpg'; ?>"></a>
+                </div>
+                <div class="slider-item-caption">Our Portfolio</div>
+                </li>
+                <!-- EOF: slider-item -->
+                
+                <!-- slider-item -->
+                <li class="slider-item">
+                <div class="slider-item-image">
+                <a href="<?php print url('node/1'); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'bluemasters') . '/images/slide-image-1.jpg'; ?>"></a>
+                </div>
+                <div class="slider-item-caption">Creation of Beaches</div>
+                </li>
+                <!-- EOF: slider-item -->
+                
+                </ul>
+                </div>
+                
+                </div>
+                <!--EOF:#slideshow-->
 
                 <?php endif; ?>
 
@@ -144,7 +144,7 @@
                 <div id="home-blocks-area" class="clearfix">
                 
             		<?php if ($messages): ?>
-                    <div id="console" class="clearfix">
+                    <div class="clearfix">
                     <?php print $messages; ?>
                     </div>
                     <?php endif; ?>

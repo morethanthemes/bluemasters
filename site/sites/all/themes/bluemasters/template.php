@@ -96,21 +96,24 @@ function bluemasters_page_alter($page) {
 /**
  * Add Javascript for responsive mobile menu
  */
-drupal_add_js(drupal_get_path('theme', 'bluemasters') .'/js/jquery.mobilemenu.min.js');
+if (theme_get_setting('responsive_menu_state','bluemasters')) {
 
-drupal_add_js('jQuery(document).ready(function($) { 
+$responsive_menu_switchwidth=theme_get_setting('responsive_menu_switchwidth','bluemasters');
+$responsive_menu_topoptiontext=theme_get_setting('responsive_menu_topoptiontext','bluemasters');
+
+drupal_add_js(drupal_get_path('theme', 'bluemasters') .'/js/jquery.mobilemenu.min.js');
+drupal_add_js('
+jQuery(document).ready(function($) {
 
 	$("#navigation > ul.menu, #navigation ul.sf-menu, #navigation .content > ul.menu").mobileMenu({
-		prependTo: "#navigation",
-		combine: false,
-		switchWidth: 980,
-		topOptionText: "Select page"
+	prependTo: "#navigation",
+	combine: false,
+	switchWidth: '.$responsive_menu_switchwidth.',
+	topOptionText: "'.$responsive_menu_topoptiontext.'"
 	});
 
-	}); /* JQUERY ENDS */',
-	array('type' => 'inline', 'scope' => 'footer', 'weight' => 6));
-
-
-
+});', array('type' => 'inline', 'scope' => 'footer', 'weight' => 10)
+);
+}
 
 ?>

@@ -119,6 +119,8 @@ html[xmlns] .clearfix { display: block; }
 
 #right .block ul.menu { padding:0; margin:0; } 
 
+#right .block ul.menu ul { padding:0 0 0 10px; }
+
 #right .block ul.menu li { padding:0; margin:0; list-style: none; } 
 
 #right .block ul.menu li a { background: url("../images/menu-right-bg.png") no-repeat scroll 96% center #E0E3EB; color: #747C93; display: block;
@@ -310,7 +312,7 @@ ul.menu li { margin: 0 0 0.25em 1.5em; padding: 0; }
 
 ul li.leaf { list-style-type: disc; list-style-image:none; }
 
-ul.inline li.node-readmore, ul.inline li.comment-add { background: #11719F; border: none; color: #FFFFFF; float: right; font-weight: bold; margin: 10px 0 0 7px;  cursor:pointer; 
+ul.inline li.node-readmore, ul.inline li.comment-add { background: #11719F; border: none; color: #FFFFFF; float: right; font-weight: bold; margin: 7px 0 0 7px;  cursor:pointer; 
 font-family: Arial, Verdana, Helvetica, sans-serif; padding:10px; }
 
 .node-readmore a, .comment-add a, .comment-add a.active { color:#ffffff; padding:10px; }
@@ -507,9 +509,6 @@ html[xmlns] .slides {display: block;}
 
 .flex-control-paging li a.flex-active {background:url(../images/slide-nav-button-hover.png) no-repeat center; border:none; outline:none; cursor: default;}
 
-
-#console { border:1px solid #333949; padding:10px; margin:0 0 10px 0; }
-
 /*
  * Top social, Network
  */
@@ -585,6 +584,8 @@ ol ol ol {list-style-type:lower-alpha; }
 li { display:list-item; }
 ul li a { text-decoration:none; }
 
+div.messages { margin: 0 10px 20px 10px; }
+
 /*
  * Responsive styles 
  */
@@ -606,8 +607,8 @@ ul li a { text-decoration:none; }
 	#logo-floater { text-align: center; float: none; }
 	/*main navigation*/
 	#navigation { margin: 30px auto 20px; width: 55%; float: none; min-width: 220px; }
-	select.mnav { width: 100%; padding: 7px; border: 1px solid black; }
-	select.mnav:focus { outline: none;}
+	select { width: 100%; padding: 7px; border: 1px solid black; }
+	select:focus { outline: none;}
 	/*banner*/
 	#slideshow { background: none; }
 	/*main-area*/
@@ -640,8 +641,8 @@ ul li a { text-decoration:none; }
 @media all and (min-width: 760px) and (max-width: 979px) {
 	/*main navigation*/
 	#navigation { margin: 30px 0 0 0; width: 250px; }
-	select.mnav { width: 100%; padding: 7px; border: 1px solid black; }
-	select.mnav:focus { outline: none;}
+	#navigation select { width: 100%; padding: 7px; border: 1px solid black; }
+	#navigation select:focus { outline: none;}
 	/*banner*/
 	#slideshow { background: url(../images/slide-shadow_700.png) center 99.5% no-repeat; }
 	/*home-blocks*/

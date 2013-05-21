@@ -1,5 +1,5 @@
 name = Blue Masters
-description = Theme based on Blue Masters PSD template
+description = A responsive theme based on Blue Masters PSD template, supported by <a href="http://www.morethanthemes.com/" target="_blank">More than (just) Themes</a>. If you like this theme, we encourage you to try also our other <a href="http://www.morethanthemes.com" target="_blank">Premium</a> and <a href="http://drupalizing.com" target="_blank">Free</a> Drupal themes.
 version = VERSION
 core = 7.x
 engine = phptemplate
@@ -41,8 +41,10 @@ settings[slideshow_random]= 0
 settings[slideshow_controls]= 1
 settings[slideshow_pause]= 1
 settings[slideshow_touch]= 1
+settings[responsive_menu_state]= 1
+settings[responsive_menu_switchwidth]='960'
+settings[responsive_menu_topoptiontext]= 'Select a page'
 
-version = "7.1.1"
 project = "bluemasters"
 ; Information added by drupal.org packaging script on 2011-11-15
 version = "7.x-1.3"
