@@ -74,7 +74,7 @@ html[xmlns] .clearfix { display: block; }
 /*
  * Wrapper
  */
-#wrapper { margin:0 auto; text-align:left; padding:0 0 20px 0;}
+#wrapper { margin:0 auto; text-align:left; padding:0 0 20px 0; }
 
 #header { padding: 29px 0 21px 0; }
 
@@ -87,6 +87,8 @@ html[xmlns] .clearfix { display: block; }
 #slogan { color:#485766; text-transform:uppercase; font-size:10px; }
 
 #navigation { float:right; margin:10px 0 0 40px;  display:block; }
+
+#highlighted { padding:0 0 20px 0; }
 
 #main-area { background: transparent; clear:both; display:block; overflow:hidden;  background-image:url(../images/home-block-box-bg.png); padding: 10px;} 
 
@@ -126,7 +128,7 @@ html[xmlns] .clearfix { display: block; }
 #right .block ul.menu li a { background: url("../images/menu-right-bg.png") no-repeat scroll 96% center #E0E3EB; color: #747C93; display: block;
 font-family:  Verdana, Arial,Helvetica,sans-serif; font-weight: 600; overflow: hidden; padding: 10px 20px 10px 10px; margin:0 0 2px 0; } 
 
-#right .block ul.menu li ul.menu li a { background-image:none; margin:0 0 2px 10px; }
+#right .block ul.menu li ul.menu li a { background-image:none; margin:0 0 2px 0; }
 
 /*
  * Home
@@ -167,7 +169,7 @@ font-family:  Arial, Helvetica, Sans Serif; font-size: 14px; color: #6a7796; }
 #home-blocks-area .block .content .detail h3 { font-size:14px; padding:0; margin:0; }
 #home-blocks-area .block .content .detail h4 { color: #6a7796; font-size: 14px; line-height: 16px; padding:0; margin:0; font-weight:normal; }
 
-#home-blocks-area .block .content p.post-note{  font-size: 12px; margin-top: -10px; }
+#home-blocks-area .block .content p.post-note{  font-size: 12px; margin-top: -8px; }
 
 #home-blocks-area .block .content p.post-note a{ color: #3f9fcf; }
 

@@ -94,7 +94,7 @@
 
                             <div id="main"  class="inside clearfix">
                                 
-                                <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+                                <?php if ($page['highlighted']): ?><div id="highlighted" class="clearfix"><?php print render($page['highlighted']); ?></div><?php endif; ?>
                            
                     			<?php if ($messages): ?>
                                 <div class="clearfix">
