@@ -3,7 +3,7 @@ BlueMasters
 
 This repository contains the Drupal installation that runs at [drupalizing.com](http://drupalizing.com) and demonstrates the [“BlueMasters”](http://drupal.org/project/bluemasters) Drupal theme. We use this repository in order to maintain the above mentioned site and develop the corresponding theme. 
 
-You are welcome however to grab this code and have the demonstration site running on your end. By doing this you have the chance to see the ["Blue Masters" theme in action](http://demo.drupalizing.com/?theme=bluemasters) exactly the way it looks like on our demo.
+You are welcome however to grab this code and have the demonstration site running on your end. By doing this you have the chance to see the ["BlueMasters" theme in action](http://demo.drupalizing.com/?theme=bluemasters) exactly the way it looks like on our demo.
 
 Installation instructions
 --------------
