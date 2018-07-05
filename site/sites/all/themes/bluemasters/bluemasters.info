@@ -46,9 +46,9 @@ settings[responsive_menu_switchwidth]='960'
 settings[responsive_menu_topoptiontext]= 'Select a page'
 
 
-; Information added by drupal.org packaging script on 2013-05-22
-version = "7.x-2.0"
+; Information added by Drupal.org packaging script on 2014-04-08
+version = "7.x-2.1"
 core = "7.x"
 project = "bluemasters"
-datestamp = "1369232413"
+datestamp = "1396987265"
 

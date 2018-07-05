@@ -18,13 +18,13 @@ if (theme_get_setting('slideshow_js','bluemasters')):
 	drupal_add_js(drupal_get_path('theme', 'bluemasters') . '/js/jquery.flexslider-min.js');
 
 	//Initialize slideshow using theme settings
-	$effect=theme_get_setting('slideshow_effect','bluemasters');
-	$effect_time=theme_get_setting('slideshow_effect_time','bluemasters')*1000;
-	$slideshow_controls=theme_get_setting('slideshow_controls','bluemasters');
-	$slideshow_random=theme_get_setting('slideshow_random','bluemasters');
-	$slideshow_pause=theme_get_setting('slideshow_pause','bluemasters');
-	$slideshow_touch=theme_get_setting('slideshow_touch','bluemasters');
-	$animation_time=theme_get_setting('slideshow_animation_time','bluemasters')*1000;
+    $effect=theme_get_setting('slideshow_effect','bluemasters');
+    $effect_time= (int) theme_get_setting('slideshow_effect_time','bluemasters')*1000;
+    $slideshow_controls=theme_get_setting('slideshow_controls','bluemasters');
+    $slideshow_random=theme_get_setting('slideshow_random','bluemasters');
+    $slideshow_pause=theme_get_setting('slideshow_pause','bluemasters');
+    $slideshow_touch=theme_get_setting('slideshow_touch','bluemasters');
+    $animation_time= (int) theme_get_setting('slideshow_animation_time','bluemasters')*1000;
 
 	drupal_add_js('
 		jQuery.noConflict();
@@ -98,8 +98,9 @@ function bluemasters_page_alter($page) {
  */
 if (theme_get_setting('responsive_menu_state','bluemasters')) {
 
-$responsive_menu_switchwidth=theme_get_setting('responsive_menu_switchwidth','bluemasters');
+$responsive_menu_switchwidth= (int) theme_get_setting('responsive_menu_switchwidth','bluemasters');
 $responsive_menu_topoptiontext=theme_get_setting('responsive_menu_topoptiontext','bluemasters');
+drupal_add_js(array('bluemasters' => array('topoptiontext' => $responsive_menu_topoptiontext)), 'setting');
 
 drupal_add_js(drupal_get_path('theme', 'bluemasters') .'/js/jquery.mobilemenu.min.js');
 drupal_add_js('
@@ -108,8 +109,8 @@ jQuery(document).ready(function($) {
 	$("#navigation > ul.menu, #navigation ul.sf-menu, #navigation .content > ul.menu").mobileMenu({
 	prependTo: "#navigation",
 	combine: false,
-	switchWidth: '.$responsive_menu_switchwidth.',
-	topOptionText: "'.$responsive_menu_topoptiontext.'"
+    switchWidth: '.$responsive_menu_switchwidth.',
+    topOptionText: Drupal.settings.bluemasters[\'topoptiontext\']
 	});
 
 });', array('type' => 'inline', 'scope' => 'footer', 'weight' => 10)
