@@ -1,14 +1,14 @@
 BlueMasters
 ==========
 
-This repository contains the Drupal installation that runs at [drupalizing.com](http://drupalizing.com) and demonstrates the [ìBlueMastersî](http://drupal.org/project/bluemasters) Drupal theme. We use this repository in order to maintain the above mentioned site and develop the corresponding theme. 
+This repository contains the Drupal installation that runs at [drupalizing.com](http://drupalizing.com) and demonstrates the [‚ÄúBlueMasters‚Äù](http://drupal.org/project/bluemasters) Drupal theme. We use this repository in order to maintain the above mentioned site and develop the corresponding theme. 
 
-You are welcome however to grab this code and have the demonstration site running on your end. By doing this you have the chance to see the ["BlueMasters" theme in action](http://demo.drupalizing.com/?theme=bluemasters) exactly the way it looks like on our demo.
+You are welcome however to grab this code and have the demonstration site running on your end. By doing this you have the chance to see the ["BlueMasters" theme in action](http://demo.drupalizing.com/bluemasters) exactly the way it looks like on our demo.
 
 Installation instructions
 --------------
-+ Checkout this repository and place the ìsiteî folder under your apache path.
-+ Create an empty MySQL database and import there the ìdb_instances/db_instance.sqlî file. 
++ Checkout this repository and place the ‚Äúsite‚Äù folder under your apache path.
++ Create an empty MySQL database and import there the ‚Äúdb_instances/db_instance.sql‚Äù file. 
 + Start the Drupal installation wizard by pointing your browser to the recently created folder.
  + Continue the installation by selection "Standard" installation profile.
  + In the 4th step enter your recently created database information.
